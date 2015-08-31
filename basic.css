@@ -1,0 +1,18 @@
+#content h3 {
+    color: green;
+}
+
+.test-class {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 10001;
+}
+
+.vR:hover,
+.vN:hover,
+.vT:hover {
+    cursor: pointer !important;
+}

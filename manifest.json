@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "Jon's 2nd Try",
+	"author": "JAS",
+	"version": "0.1.3",
+	"description": "Find emails and GH",
+	"icons": {
+		"16": "16.png",
+		"48": "48.png",
+		"128": "128.png"
+	},
+	"content_scripts": [{
+		"matches": ["http://mail.google.com/mail*", "https://mail.google.com/mail*", "http://mail.google.com/a/*", "https://mail.google.com/a/*", "https://*.linkedin.com/*", "https://*.github.com/*"],
+		"css": ["styles.css", "basic.css"],
+		"js": ["jquery.min.js", "content.js", "script.js", "jq.min.js", "popup2.js"]
+	}],
+	"web_accessible_resources": [
+		"jquery-1.10.2.min.js",
+		"gmail.min.js",
+		"reply.js"
+	],
+	"permissions": [
+		"tabs",
+		"storage",
+		"https://*/*",
+		"http://*/*"
+	]
+}

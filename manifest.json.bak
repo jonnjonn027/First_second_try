@@ -1,0 +1,34 @@
+{
+	"key": "jlbgabnbbiibemkmcdbhjcobjcgbpjmh",
+	"manifest_version": 2,
+	"name": "Jon's 2nd Try",
+	"author": "JAS",
+	"version": "0.1.8",
+	"description": "Find emails and GH",
+	"icons": { "16": "16.png",
+	"48": "48.png",
+	"128": "128.png" },
+	"homepage_url": "https://replyapp.io",
+	"background": {
+        "scripts": ["background.js"]
+    },
+	"content_scripts": [{
+		"matches": ["http://mail.google.com/mail*", "https://mail.google.com/mail*", "http://mail.google.com/a/*", "https://mail.google.com/a/*", "https://*.linkedin.com/*", "https://*.github.com/*"],
+		"css": ["styles.css", "basic.css"],
+		"js": ["jquery.min.js", "content.js", "script.js", "jq.min.js", "popup2.js"]
+	}],
+	"web_accessible_resources": [
+		"jquery-1.10.2.min.js",
+		"gmail.js",
+		"main.js"
+	]
+	//,
+	//"permissions": [
+	//	"identity"
+	//],
+	//"oauth2": {
+	//	"client_id": "1015719718983-3652l0a4odg1e7n5dksiq0i7h8k3642e.apps.googleusercontent.com",
+	//	"scopes": ["https://www.googleapis.com/auth/plus.login",
+	//			"https://www.googleapis.com/auth/userinfo.email"]
+	//}
+}
